@@ -1,0 +1,60 @@
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/maps/modules/data.js"></script>
+<script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+<script>
+$.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=world-population.json&callback=?', function (data) {
+
+    // Correct UK to GB in data
+    $.each(data, function () {
+        if (this.code === 'UK') {
+            this.code = 'GB';
+        }
+    });
+
+    Highcharts.mapChart('container', {
+        chart: {
+            borderWidth: 1,
+            map: 'custom/world'
+        },
+
+        title: {
+            text: 'The Met Visitor Count'
+        },
+
+        subtitle: {
+            text: 'Number of visitors from around the world from 2016-2017'
+        },
+
+        legend: {
+            enabled: false
+        },
+
+        mapNavigation: {
+            enabled: true,
+            buttonOptions: {
+                verticalAlign: 'bottom'
+            }
+        },
+
+        series: [{
+            name: 'Countries',
+            color: '#cc1c31',
+            enableMouseTracking: false
+        }, {
+            type: 'mapbubble',
+            name: 'Number of Visitors 2016-2017',
+            joinBy: ['iso-a2', 'code'],
+            data: data,
+            minSize: 4,
+            maxSize: '13%',
+            tooltip: {
+                pointFormat: '{point.code}: {point.z} thousands'
+            }
+        }]
+    });
+
+});
+
+</script>
+<div id="container" style="height: 500px; min-width: 310px; max-width: 800px; margin: 0 auto"></div>
