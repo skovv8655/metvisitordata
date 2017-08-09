@@ -3,7 +3,650 @@
 <script src="https://code.highcharts.com/maps/modules/data.js"></script>
 <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
 <script>
-$.getJSON('https://raw.githubusercontent.com/skovv8655/metvisitordata/master/dataforbubblemap.json', function (data) {
+
+data = [{
+    code: "AF",
+    z: 0
+}, {
+    code: "AL",
+    z: 0
+}, {
+    code: "DZ",
+    z: 0
+}, {
+    code: "AS",
+    z: 0
+}, {
+    code: "ADO",
+    z: 0
+}, {
+    code: "AO",
+    z: 0
+}, {
+    code: "AG",
+    z: 0
+}, {
+    code: "AR",
+    z: 100000
+}, {
+    code: "AM",
+    z: 0
+}, {
+    code: "AW",
+    z: 0
+}, {
+    code: "AU",
+    z: 80000
+}, {
+    code: "AT",
+    z: 10000
+}, {
+    code: "AZ",
+    z: 0
+}, {
+    code: "BS",
+    z: 0
+}, {
+    code: "BH",
+    z: 0
+}, {
+    code: "BD",
+    z: 0
+}, {
+    code: "BB",
+    z: 0
+}, {
+    code: "BY",
+    z: 0
+}, {
+    code: "BE",
+    z: 20000
+}, {
+    code: "BZ",
+    z: 0
+}, {
+    code: "BJ",
+    z: 0
+}, {
+    code: "BM",
+    z: 0
+}, {
+    code: "BT",
+    z: 0
+}, {
+    code: "BO",
+    z: 0
+}, {
+    code: "BA",
+    z: 0
+}, {
+    code: "BW",
+    z: 0
+}, {
+    code: "BR",
+    z: 100000
+}, {
+    code: "BN",
+    z: 0
+}, {
+    code: "BG",
+    z: 0
+}, {
+    code: "BF",
+    z: 0
+}, {
+    code: "BI",
+    z: 0
+}, {
+    code: "CV",
+    z: 0
+}, {
+    code: "KH",
+    z: 0
+}, {
+    code: "CM",
+    z: 0
+}, {
+    code: "CA",
+    z: 150000
+}, {
+    code: "KY",
+    z: 0
+}, {
+    code: "CF",
+    z: 0
+}, {
+    code: "TD",
+    z: 0
+}, {
+    code: "CHI",
+    z: 0
+}, {
+    code: "CL",
+    z: 30000
+}, {
+    code: "CN",
+    z: 370000
+}, {
+    code: "CO",
+    z: 30000
+}, {
+    code: "KM",
+    z: 0
+}, {
+    code: "ZAR",
+    z: 0
+}, {
+    code: "CG",
+    z: 0
+}, {
+    code: "CR",
+    z: 0
+}, {
+    code: "CI",
+    z: 0
+}, {
+    code: "HR",
+    z: 0
+}, {
+    code: "CU",
+    z: 0
+}, {
+    code: "CW",
+    z: 0
+}, {
+    code: "CY",
+    z: 0
+}, {
+    code: "CZ",
+    z: 0
+}, {
+    code: "DK",
+    z: 10000
+}, {
+    code: "DJ",
+    z: 0
+}, {
+    code: "DM",
+    z: 0
+}, {
+    code: "DO",
+    z: 10000
+}, {
+    code: "EC",
+    z: 10000
+}, {
+    code: "EG",
+    z: 10000
+}, {
+    code: "SV",
+    z: 0
+}, {
+    code: "GQ",
+    z: 0
+}, {
+    code: "ER",
+    z: 0
+}, {
+    code: "EE",
+    z: 0
+}, {
+    code: "ET",
+    z: 0
+}, {
+    code: "FO",
+    z: 0
+}, {
+    code: "FJ",
+    z: 0
+}, {
+    code: "FI",
+    z: 10000
+}, {
+    code: "FR",
+    z: 230000
+}, {
+    code: "PF",
+    z: 0
+}, {
+    code: "GA",
+    z: 0
+}, {
+    code: "GM",
+    z: 0
+}, {
+    code: "GE",
+    z: 0
+}, {
+    code: "DE",
+    z: 0
+}, {
+    code: "GH",
+    z: 0
+}, {
+    code: "GR",
+    z: 20000
+}, {
+    code: "GL",
+    z: 0
+}, {
+    code: "GD",
+    z: 0
+}, {
+    code: "GU",
+    z: 0
+}, {
+    code: "GT",
+    z: 0
+}, {
+    code: "GN",
+    z: 0
+}, {
+    code: "GW",
+    z: 0
+}, {
+    code: "GY",
+    z: 0
+}, {
+    code: "HT",
+    z: 0
+}, {
+    code: "HN",
+    z: 0
+}, {
+    code: "HK",
+    z: 0
+}, {
+    code: "HU",
+    z: 10000
+}, {
+    code: "IS",
+    z: 0
+}, {
+    code: "IN",
+    z: 20000
+}, {
+    code: "ID",
+    z: 0
+}, {
+    code: "IR",
+    z: 0
+}, {
+    code: "IQ",
+    z: 0
+}, {
+    code: "IE",
+    z: 20000
+}, {
+    code: "IMY",
+    z: 0
+}, {
+    code: "IL",
+    z: 30000
+}, {
+    code: "IT",
+    z: 130000
+}, {
+    code: "JM",
+    z: 0
+}, {
+    code: "JP",
+    z: 130000
+}, {
+    code: "JO",
+    z: 0
+}, {
+    code: "KZ",
+    z: 0
+}, {
+    code: "KE",
+    z: 0
+}, {
+    code: "KI",
+    z: 0
+}, {
+    code: "KP",
+    z: 0
+}, {
+    code: "KR",
+    z: 0
+}, {
+    code: "KSV",
+    z: 0
+}, {
+    code: "KW",
+    z: 0
+}, {
+    code: "KG",
+    z: 0
+}, {
+    code: "LA",
+    z: 0
+}, {
+    code: "LV",
+    z: 0
+}, {
+    code: "LB",
+    z: 0
+}, {
+    code: "LS",
+    z: 0
+}, {
+    code: "LR",
+    z: 0
+}, {
+    code: "LY",
+    z: 0
+}, {
+    code: "LI",
+    z: 0
+}, {
+    code: "LT",
+    z: 0
+}, {
+    code: "LU",
+    z: 0
+}, {
+    code: "MO",
+    z: 0
+}, {
+    code: "MK",
+    z: 0
+}, {
+    code: "MG",
+    z: 0
+}, {
+    code: "MW",
+    z: 0
+}, {
+    code: "MY",
+    z: 0
+}, {
+    code: "MV",
+    z: 0
+}, {
+    code: "ML",
+    z: 0
+}, {
+    code: "MT",
+    z: 0
+}, {
+    code: "MH",
+    z: 0
+}, {
+    code: "MR",
+    z: 0
+}, {
+    code: "MU",
+    z: 0
+}, {
+    code: "MX",
+    z: 70000
+}, {
+    code: "FM",
+    z: 0
+}, {
+    code: "MD",
+    z: 0
+}, {
+    code: "MC",
+    z: 0
+}, {
+    code: "MN",
+    z: 0
+}, {
+    code: "ME",
+    z: 0
+}, {
+    code: "MA",
+    z: 0
+}, {
+    code: "MZ",
+    z: 0
+}, {
+    code: "MM",
+    z: 0
+}, {
+    code: "NA",
+    z: 0
+}, {
+    code: "NP",
+    z: 0
+}, {
+    code: "NL",
+    z: 20000
+}, {
+    code: "NC",
+    z: 0
+}, {
+    code: "NZ",
+    z: 10000
+}, {
+    code: "NI",
+    z: 0
+}, {
+    code: "NE",
+    z: 0
+}, {
+    code: "NG",
+    z: 0
+}, {
+    code: "MP",
+    z: 0
+}, {
+    code: "NO",
+    z: 10000
+}, {
+    code: "OM",
+    z: 0
+}, {
+    code: "PK",
+    z: 182143
+}, {
+    code: "PW",
+    z: 0
+}, {
+    code: "PA",
+    z: 0
+}, {
+    code: "PG",
+    z: 0
+}, {
+    code: "PY",
+    z: 0
+}, {
+    code: "PE",
+    z: 10000
+}, {
+    code: "PH",
+    z: 10000
+}, {
+    code: "PL",
+    z: 10000
+}, {
+    code: "PT",
+    z: 20000
+}, {
+    code: "PR",
+    z: 0
+}, {
+    code: "QA",
+    z: 0
+}, {
+    code: "ROM",
+    z: 0
+}, {
+    code: "RU",
+    z: 70000
+}, {
+    code: "RW",
+    z: 0
+}, {
+    code: "WS",
+    z: 0
+}, {
+    code: "SM",
+    z: 0
+}, {
+    code: "ST",
+    z: 0
+}, {
+    code: "SA",
+    z: 0
+}, {
+    code: "SN",
+    z: 0
+}, {
+    code: "RS",
+    z: 0
+}, {
+    code: "SC",
+    z: 0
+}, {
+    code: "SL",
+    z: 0
+}, {
+    code: "SG",
+    z: 10000
+}, {
+    code: "SX",
+    z: 0
+}, {
+    code: "SK",
+    z: 0
+}, {
+    code: "SI",
+    z: 0
+}, {
+    code: "SB",
+    z: 0
+}, {
+    code: "SO",
+    z: 0
+}, {
+    code: "ZA",
+    z: 0
+}, {
+    code: "SS",
+    z: 0
+}, {
+    code: "ES",
+    z: 150000
+}, {
+    code: "LK",
+    z: 0
+}, {
+    code: "KN",
+    z: 0
+}, {
+    code: "LC",
+    z: 0
+}, {
+    code: "MF",
+    z: 0
+}, {
+    code: "VC",
+    z: 109
+}, {
+    code: "SD",
+    z: 0
+}, {
+    code: "SR",
+    z: 0
+}, {
+    code: "SZ",
+    z: 0
+}, {
+    code: "SE",
+    z: 20000
+}, {
+    code: "CH",
+    z: 10000
+}, {
+    code: "SY",
+    z: 0
+}, {
+    code: "TJ",
+    z: 0
+}, {
+    code: "TZ",
+    z: 0
+}, {
+    code: "TH",
+    z: 10000
+}, {
+    code: "TMP",
+    z: 0 
+}, {
+    code: "TG",
+    z: 0
+}, {
+    code: "TO",
+    z: 0
+}, {
+    code: "TT",
+    z: 0
+}, {
+    code: "TN",
+    z: 0
+}, {
+    code: "TR",
+    z: 10000
+}, {
+    code: "TM",
+    z: 0
+}, {
+    code: "TC",
+    z: 0
+}, {
+    code: "TV",
+    z: 0
+}, {
+    code: "UG",
+    z: 0
+}, {
+    code: "UA",
+    z: 10000
+}, {
+    code: "AE",
+    z: 0
+}, {
+    code: "GB",
+    z: 170000
+}, {
+    code: "US",
+    z: 0
+}, {
+    code: "UY",
+    z: 10000
+}, {
+    code: "UZ",
+    z: 0
+}, {
+    code: "VU",
+    z: 0
+}, {
+    code: "VE",
+    z: 10000
+}, {
+    code: "VN",
+    z: 0
+}, {
+    code: "VI",
+    z: 0
+}, {
+    code: "WBG",
+    z: 0
+}, {
+    code: "YE",
+    z: 0
+}, {
+    code: "ZM",
+    z: 0
+}, {
+    code: "ZW",
+    z: 0
+}];
 
     // Correct UK to GB in data
     $.each(data, function () {
@@ -46,7 +689,7 @@ $.getJSON('https://raw.githubusercontent.com/skovv8655/metvisitordata/master/dat
             name: 'Number of Visitors 2016-2017',
             joinBy: ['iso-a2', 'code'],
             data: data,
-            minSize: 4,
+            minSize: 0,
             maxSize: '13%',
             tooltip: {
                 pointFormat: '{point.code}: {point.z} thousands'
@@ -54,7 +697,8 @@ $.getJSON('https://raw.githubusercontent.com/skovv8655/metvisitordata/master/dat
         }]
     });
 
-});
+
+
 
 </script>
 <div id="container" style="height: 500px; min-width: 310px; max-width: 800px; margin: 0 auto"></div>
